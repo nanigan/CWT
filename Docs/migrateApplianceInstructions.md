@@ -31,7 +31,6 @@ The tool performs the following functions:
 
 The following sections document the network, vCenter, and the Azure Migrate appliance requirements, that when met, will enable you to complete the remaining tasks.
 
----
 
 ## Network Configuration
 
