@@ -29,19 +29,19 @@ The tool performs the following functions:
 
 # Requirements
 
-The following sections document the network, vCenter, and the Azure Migrate appliance requirements, that when met will enable you to complete the remaining tasks.
+The following sections document the network, vCenter, and the Azure Migrate appliance requirements, that when met, will enable you to complete the remaining tasks.
 
 ---
 
 ## Network Configuration
 
-The first task that needs to be performed is to ensure that the Azure Migrate appliance has the required **OUTBOUND** connections to the URLs listed in the table below
+The first task that needs to be performed is to ensure that the Azure Migrate appliance has the required **OUTBOUND** connectivity over TCP port 443 (HTTPS/SSL)
 
 When you deploy the appliance, Azure Migrate does a connectivity check to the required URLs.
 You need to allow access to all URLs in the list. If you're doing assessment only, you can skip the URLs that are marked as required for VMware agentless migration.
 If you're using a URL-based proxy to connect to the internet, make sure that the proxy resolves any CNAME records received while looking up the URLs
 
-[**OUTBOUND FIREWALL RULES:**](https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance#url-access)
+**URL List**
 
 
 | URL                                                                                                                                                                                	| Details                                                                                              	|
@@ -111,6 +111,8 @@ The appliance will be deployed on **ONE** new VM on a vCenter Server using an .O
 
 
 # -> RESUME HERE AS A TEAM WEEK OF 7/18 <-
+
+This section is in **draft** form, please take caution if continuing on your own
 
 ## Configure Azure Migrate Appliance
 
@@ -222,7 +224,7 @@ To start vCenter Server discovery, in Step 3: Provide server credentials to perf
 
 [**Create and manage projects**](https://docs.microsoft.com/en-us/azure/migrate/create-manage-projects)
 
-Project is used to store discovery, assessment, and migration metadata collected from the environment you're assessing or migrating. In a project you can track discovered assets, create assessments, and orchestrate migrations to Azure
+An Azure Migrate Project is used to store discovery, assessment, and migration metadata collected from the environment you're assessing or migrating. In a project you can track discovered assets, create assessments, and orchestrate migrations to Azure
 
 **Set up a new project in an Azure subscription**
 
